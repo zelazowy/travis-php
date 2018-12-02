@@ -27,4 +27,13 @@ class CalculatorTest extends TestCase
             [-666, 666, 0],
         ];
     }
+
+    public function testFloats()
+    {
+        $this->expectException(\Throwable::class);
+
+        $calculator = new Calculator();
+
+        $calculator->add(0.1, 0.9);
+    }
 }
